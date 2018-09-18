@@ -1,5 +1,6 @@
 
-export const saveDataPoints = (dataPoints) => ({
+export const saveDataPoints = (dataPoints, time) => ({
     type: 'SAVE_DATA',
-    payload: dataPoints
+    payload: dataPoints,
+    time
 });

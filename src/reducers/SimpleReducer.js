@@ -3,7 +3,8 @@ export const randomNumbers = (state = {}, action) => {
         case 'SAVE_DATA':
             console.log(action);
             return {
-                data: action.payload
+                data: action.payload,
+                time: action.time
             };
         default :
             return state;

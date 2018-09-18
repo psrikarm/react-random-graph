@@ -34,10 +34,11 @@ class App extends Component {
         fetch("https://api.random.org/json-rpc/1/invoke", {
             method: 'POST',
             body: this.getRequestBody()
-        }).then(data => data.json())
+        })
+            .then(data => data.json())
             .then(data => {
                 console.log(data.result.random.data);
-                this.props.dispatch(saveDataPoints(data.result.random.data));
+                this.props.dispatch(saveDataPoints(data.result.random.data, data.result.random.completionTime));
             });
     }
 
