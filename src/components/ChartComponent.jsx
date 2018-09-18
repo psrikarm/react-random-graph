@@ -35,6 +35,9 @@ class ChartComponent extends Component {
             datasets: [
                 {
                     label: "Dataset",
+                    pointColor: "#f00",
+                    fillColor: "rgba(0,0,0,0)",
+                    strokeColor: "#00c3ff",
                     data: this.props.payload
                 }
             ]
@@ -44,7 +47,7 @@ class ChartComponent extends Component {
     render() {
         return (
             <div>
-                <Line data={this.getGraphData()} width="600" height="250"/>
+                <Line data={this.getGraphData()} width={window.innerWidth * 0.75} height={window.innerHeight / 2}/>
             </div>
         );
     }
